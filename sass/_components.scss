@@ -4,8 +4,6 @@
     margin-left: 2rem;
 }
 
-
-
 /////search box
 .search {
     flex: 0 0 40%;
@@ -65,10 +63,7 @@
 
 }
 
-
 ////user nav
-/// 
-
 
 .user-nav {
     display: flex;
@@ -115,7 +110,6 @@
 
     }
 
-
     &__photo {
         height: 3.75rem;
         border-radius: 50%;
@@ -128,28 +122,35 @@
 
 }
 
-
 /////side nav
 
-
 .side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
 
-    
+    &__item {}
 
-    &__item {
+    &__link:link,
+    &__link:visited {
+        color: var(--color-Grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
 
-    }
-
-    &__link {
 
     }
 
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor ;
     }
 }
-
 
 ///
 
