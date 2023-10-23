@@ -245,7 +245,6 @@
         color: #fff;
         margin-left: 3rem;
         align-self: stretch;
-
         padding: 0 2.25rem;
         display: flex;
         align-items: center;
@@ -256,7 +255,7 @@
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
-        margin-bottom:-3px ;
+        margin-bottom: -3px;
 
     }
 
@@ -309,3 +308,28 @@
 
     }
 }
+
+//paragraph
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+//list
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+flex: 0 0 50%;
+    }
+
+}
+
+//recommend
