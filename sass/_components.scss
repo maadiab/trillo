@@ -279,12 +279,14 @@
     cursor: pointer;
     transition: all .2s;
 
-& span{
-margin-left: 3px;
-}
+    & span {
+        margin-left: 3px;
+    }
+
     &:hover {
         color: var(--color-Grey-dark-1);
-        span{
+
+        span {
             margin-left: 8px;
             transition: margin-left .3s;
         }
@@ -455,4 +457,78 @@ margin-left: 3px;
         z-index: 1;
     }
 
+}
+
+
+
+///cta 
+/// 
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+    }
+
+
+
+}
+
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-Primary-light), var(--color-Primary-dark));
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+
+    & > *{
+        transition: all .2s;
+
+    }
+    &__visible {
+        display: inline-block;
+        padding: 2rem 8rem;
+
+
+    }
+
+    &__invisible {
+        padding: 2rem 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: -100%;
+        left: 0;
+
+    
+
+    }
+&:hover{
+    background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark));
+
+}
+    &:hover &__invisible{
+        top: 0;
+    }
+
+
+    &:hover &__visible{
+transform: translateY(100%);    }
+
+
+&:focus{
+    animation: pulsate 1s infinite;
+}
 }
