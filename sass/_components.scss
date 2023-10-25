@@ -127,10 +127,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width:$bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
+        @media only screen and (max-width:$bp-medium) {
+            flex: 1;
+        }
+
         &:not(:last-child) {
+
+            @media only screen and (max-width:$bp-medium) {
+                margin: 0;
+            }
+
             margin-bottom: .5rem;
         }
     }
@@ -170,6 +184,11 @@
         position: relative;
         z-index: 10;
 
+
+        @media only screen and (max-width:$bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -187,6 +206,10 @@
     color: var(--color-Grey-dark-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        display: none;
+    }
 }
 
 
@@ -366,13 +389,17 @@
     color: var(--color-Grey-dark-3);
     display: flex;
     align-items: center;
+    // flex-wrap: wrap;
 
 
     &__count {
         margin-right: auto;
     }
 
-    &__friends {}
+    &__friends {
+
+        display: flex;
+    }
 
     &__photo {
 
@@ -383,7 +410,7 @@
         border-radius: 50%;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -396,11 +423,15 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
-    // background-image: url();
-
     position: relative;
     overflow: hidden;
 
+
+    @media only screen and (max-width:$bp-medium) {
+        padding: 2rem;
+        margin-bottom:3rem;
+
+    }
 
     &__text {
         position: relative;
@@ -468,6 +499,10 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width:$bp-medium) {
+        padding: 2.5rem 0;
+
+    }
     &__book-now {
         font-size: 2rem;
         text-transform: uppercase;
@@ -493,10 +528,11 @@
     overflow: hidden;
 
 
-    & > *{
+    &>* {
         transition: all .2s;
 
     }
+
     &__visible {
         display: inline-block;
         padding: 2rem 8rem;
@@ -512,23 +548,26 @@
         top: -100%;
         left: 0;
 
-    
+
 
     }
-&:hover{
-    background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark));
 
-}
-    &:hover &__invisible{
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark));
+
+    }
+
+    &:hover &__invisible {
         top: 0;
     }
 
 
-    &:hover &__visible{
-transform: translateY(100%);    }
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
 
 
-&:focus{
-    animation: pulsate 1s infinite;
-}
+    &:focus {
+        animation: pulsate 1s infinite;
+    }
 }
